@@ -1,4 +1,4 @@
-# Arduino Macro Board With Display
+# MiMo
 ## _First project with Lil Pap_
 
 This is a big project that integrates a couple of technologies and is going to improve my everyday life. Its a small display that sits in my desk and I connect it to my computer to show stats and control something over it.
