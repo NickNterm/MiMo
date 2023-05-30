@@ -44,3 +44,4 @@ Maybe a good idea is to change something in our computer like:
 
 ### Other Functionalities
 - Pomodoro Timer
+- Simple animation from whatever
