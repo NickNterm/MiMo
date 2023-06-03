@@ -5,10 +5,13 @@ This is a big project that integrates a couple of technologies and is going to i
 
 
 **This is a working Prototype in Breadboard**
+
 ![http://url/to/img.png](https://github.com/NickNterm/MiMo/blob/main/Images/BreadBoardPrototype.jpg?raw=true)
 
 **And that's the circuit**
+
 ![http://url/to/img.png](https://github.com/NickNterm/MiMo/blob/main/Images/Schematic.png?raw=true)
+
 What are we going to use in this project
 - Arduino
   - Rotary Encoder
