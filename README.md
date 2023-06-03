@@ -12,6 +12,16 @@ This is a big project that integrates a couple of technologies and is going to i
 
 ![http://url/to/img.png](https://github.com/NickNterm/MiMo/blob/main/Images/Schematic.png?raw=true)
 
+**Display UI**
+
+![Alt Text](https://github.com/NickNterm/MiMo/blob/main/Images/DisplayUI/MenuIcons.png)
+![Alt Text](https://github.com/NickNterm/MiMo/blob/main/Images/DisplayUI/BatteryScreen.png)
+![Alt Text](https://github.com/NickNterm/MiMo/blob/main/Images/DisplayUI/CPUUsageScreen.png)
+![Alt Text](https://github.com/NickNterm/MiMo/blob/main/Images/DisplayUI/NetworkScreen.png)
+![Alt Text](https://github.com/NickNterm/MiMo/blob/main/Images/DisplayUI/TempScreen.png)
+![Alt Text](https://github.com/NickNterm/MiMo/blob/main/Images/DisplayUI/TimeScreen.png)
+![Alt Text](https://github.com/NickNterm/MiMo/blob/main/Images/DisplayUI/VolumeScreen.png)
+
 What are we going to use in this project
 - Arduino
   - Rotary Encoder
