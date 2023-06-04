@@ -89,14 +89,14 @@ void loop(void) {
       if (nowShowing == "Menu") {
         menuEncoderMinus();
       }else if(nowShowing == "Volume"){
-        volumeEncoderPlus();
+        volumeEncoderMinus();
       }
     } else {
       // Decrement
       if (nowShowing == "Menu") {
         menuEncoderPlus();
       }else if(nowShowing == "Volume"){
-        volumeEncoderMinus();
+        volumeEncoderPlus();
       }
     }
     // Set old Position
@@ -108,6 +108,8 @@ void loop(void) {
     if (nowShowing == "Menu") {
       nowShowing = menu_icon_label[getElementPageIndex()];
       Serial.println(nowShowing);
+    } else if (nowShowing == "Volume") {
+      volumeEncoderClick();
     }
     isFirstClick = false;
   }
@@ -119,6 +121,8 @@ void loop(void) {
     draw3DCube(u8g);
   } else if (nowShowing == "Battery") {
     drawBattery(u8g);
+  } else if (nowShowing == "Volume") {
+    drawVolume(u8g);
   } else {
     u8g.firstPage();
     do {

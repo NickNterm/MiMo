@@ -4,8 +4,6 @@ static int elementPageIndex = 0;
 static int prevIndex = menu_icon_allArray_LEN - 1;
 static int nextIndex = 1;
 
-
-
 int getElementPageIndex(void) {
   return elementPageIndex;
 }
