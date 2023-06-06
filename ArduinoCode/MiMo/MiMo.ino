@@ -2,6 +2,7 @@
 #include <Encoder.h>
 #include "dcube.h"
 #include "menu.h"
+#include "graph.h"
 #include "battery.h"
 #include "icons.h"
 #include "volume.h"
@@ -123,6 +124,10 @@ void loop(void) {
     drawBattery(u8g);
   } else if (nowShowing == "Volume") {
     drawVolume(u8g);
+  } else if (nowShowing == "GPU Usage") {
+    drawGraph(u8g, "GPU");
+  } else if (nowShowing == "CPU Usage") {
+    drawGraph(u8g, "CPU");
   } else {
     u8g.firstPage();
     do {
