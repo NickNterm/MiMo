@@ -22,6 +22,31 @@ This is a big project that integrates a couple of technologies and is going to i
 ![Alt Text](https://github.com/NickNterm/MiMo/blob/main/Images/DisplayUI/TimeScreen.png)
 ![Alt Text](https://github.com/NickNterm/MiMo/blob/main/Images/DisplayUI/VolumeScreen.png)
 
+### Implemented Features On Arduino
+
+- [x] CPU Graph
+- [x] GPU Graph
+- [x] 3D Cube
+- [x] Battery
+- [x] Menu
+- [x] Volume
+- [ ] Brightness
+- [ ] Network Speed
+- [ ] Time
+- [ ] Temprature
+
+### Implemented Features On Software
+
+- [ ] Serial Communication
+- [ ] Battery
+- [ ] Volume
+- [ ] Brightness
+- [ ] Time
+- [ ] CPU
+- [ ] GPU
+- [ ] Network
+- [ ] CustomImage
+
 What are we going to use in this project
 - Arduino
   - Rotary Encoder
@@ -65,3 +90,4 @@ Maybe a good idea is to change something in our computer like:
 - Pomodoro Timer
 - Simple animation from whatever
 - Audio analizer
+- Show Image from pc
