@@ -43,7 +43,7 @@ void drawVolume(U8GLIB_SSD1306_128X64 u8g) {
 }
 
 void volumeEncoderPlus(void) {
-  volume = volume + 2;
+  volume = volume + 5;
   if (volume > 100) {
     volume = 100;
   }
@@ -51,7 +51,7 @@ void volumeEncoderPlus(void) {
 }
 
 void volumeEncoderMinus(void) {
-  volume = volume - 2;
+  volume = volume - 5;
   if (volume < 0) {
     volume = 0;
   }

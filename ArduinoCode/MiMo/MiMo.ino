@@ -3,7 +3,7 @@
 #include "dcube.h"
 #include "menu.h"
 #include "graph.h"
-#include "battery.h"
+#include "time.h"
 #include "icons.h"
 #include "volume.h"
 
@@ -11,7 +11,7 @@
 Encoder myEnc(2, 3);
 
 // Initialize the I2C OLED
-U8GLIB_SSD1306_128X64 u8g(U8G_I2C_OPT_DEV_0 | U8G_I2C_OPT_NO_ACK | U8G_I2C_OPT_FAST);  // Fast I2C / TWI
+U8GLIB_SSD1306_128X64 u8g( U8G_I2C_OPT_FAST);  // Fast I2C / TWI
 
 
 // This is the Screen that we show
@@ -48,7 +48,9 @@ void setup(void) {
   Serial.begin(9600);
 
   // Start Screen
+  u8g.begin();
   u8g.setColorIndex(1);
+  
 
   // Read encoder first position
   oldPosition = myEnc.read();
@@ -65,16 +67,12 @@ ISR(PCINT2_vect) {
       // a double click
       // double tap is sucessful
       isFirstClick = false;
-
       // Double Click Function
       if (nowShowing != "Menu") {
         nowShowing = "Menu";
       }
     }
-  } else if (!(PIND & B00010000)) {
-    // when i release
-    // set the ReleaseTime
-    swReleaseTime = millis();
+    swReleaseTime = millis();    
   }
 }
 
@@ -104,7 +102,7 @@ void loop(void) {
     oldPosition = myEnc.read();
   }
   // If is firstClick and the time is up
-  if (swReleaseTime + swDoubleTapTimeBetween < millis() && isFirstClick) {
+  if (swReleaseTime + swDoubleTapTimeBetween < millis() && isFirstClick && swReleaseTime != 0) {
     // register a single click
     if (nowShowing == "Menu") {
       nowShowing = menu_icon_label[getElementPageIndex()];
@@ -120,8 +118,8 @@ void loop(void) {
     drawMenu(u8g);
   } else if (nowShowing == "3DCube") {
     draw3DCube(u8g);
-  } else if (nowShowing == "Battery") {
-    drawBattery(u8g);
+  } else if (nowShowing == "Time") {
+    drawTime(u8g);
   } else if (nowShowing == "Volume") {
     drawVolume(u8g);
   } else if (nowShowing == "GPU Usage") {
@@ -134,4 +132,5 @@ void loop(void) {
       drawDefault();
     } while (u8g.nextPage());
   }
+  delay(20);
 }
